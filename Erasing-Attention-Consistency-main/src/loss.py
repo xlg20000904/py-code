@@ -1,6 +1,7 @@
 import torch.nn.functional as F
 from torch.autograd import Variable
 
+# 111
 def ACLoss(att_map1, att_map2, grid_l, output):
     flip_grid_large = grid_l.expand(output.size(0), -1, -1, -1)
     flip_grid_large = Variable(flip_grid_large, requires_grad = False)
